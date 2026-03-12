@@ -1,0 +1,386 @@
+---
+title: "Final Project -- Data Analysis & Dashboard"
+author: "Emmalyn Nguyen, Srishti Bakshi, Kesh Muthu"
+date: today
+format:
+  dashboard:
+    scrolling: true
+    logo: "https://ischool.uw.edu/sites/default/files/inline-images/logo-black.jpg"
+    theme: simplex
+    embed-resources: true
+---
+
+# I: Introduce your topic
+
+## Row 1 1.1: Providing Topical Overview {height="70%"}
+
+::: {.card title="Topical Overview"}
+Our three central research questions are
+
+1.  **Are occupations with a higher percentage of women associated with smaller or larger gender wage gaps?**
+2.  **How does the gender wage gap vary across occupations with different gender compositions (male-dominated, mixed-gender, female-dominated)?**
+3.  **Does the size of an occupation’s workforce relate to the magnitude of its gender wage gap?**
+
+Public discussions of the gender pay gap often rely on a single national statistic–for example, that women make roughly 80 cents for every dollar made by men (<https://www.aauw.org/issues/economic-security/pay-gap/>). While this number is certainly powerful and demonstrates economic inequality, it hides nuance and a more complex reality. This project argues that there is no single gender pay gap in the U.S.. Instead, there are a multitude of distinct pay gaps that vary highly depending on the occupational field.
+
+Using U.S. Census American Community Survey (ACS) data on median earnings by sex and occupation, this project will show how wage inequality can differ across professions. Some occupations show extreme disparities in earnings by sex, while others will show much smaller or even reversed gaps. These more complicated differences get glossed over when the gender pay gap is boiled down to a single statistic.
+
+The first dataset we are using is from <https://www.census.gov/data/tables/time-series/demo/industry-occupation/median-earnings.html> – 2023 Full-Time, Year-Round Workers & Median Earnings by Sex & Occupation. The source links directly to the U.S. Census Bureau website, which indicates that the data originate from a government source, which makes it government-owned and therefore credible. Additionally, the dataset contains nationwide data from 2023. Since this year has passed, the data collection process has been completed, ensuring that a complete dataset is available for analysis.
+
+The second dataset we are using is from <https://www.bls.gov/cps/data/aa2023/cpsaat11.htm> – Employed persons by detailed occupation, sex, race, and Hispanic or Latino ethnicity. The source links directly to the U.S. Bureau of Labor Statistics website. Similarly to the first dataset, this indicates that the data originate from a government source, which makes it government-owned and therefore credible. This dataset also contains nationwide data from 2023 so this is also a complete dataset ready for analysis.
+
+This analysis is both interesting and important because because economic matters of salary and career outcomes are fundamental life issues that shape our choices, opportunities, and long-term security. Unjustified differences in pay can affect many sectors of our financial freedom: from student debt repayment to family planning and retirement. Thus by understanding where pay gap inequality is most concentrated, we can help workers, policymakers, and employers take valuable steps towards addressing fairness and improving life outcomes for marginalized communities.
+
+Furthermore, this project tries to challenge the widely held assumption that the gender pay gap is roughly the same in all fields. We try to investigate the claim that some of the largest disparities occur in high-status occupations, while some of the lowest disparities occur in lower-paying or female-dominated fields.
+
+Our joint dataset may include biases since it only includes workers through survey responses. This means the data could exclude some groups, such as gig workers, part-time workers, undocumented workers, etc. Some occupations may also be left out if the names in the two datasets did not match. The data we are using also separates workers into two genders, men and women, which means non-binary or gender-diverse workers are not represented in the data.
+
+Our data reflects most of the 8 human rights principles. Privacy is protected by showing summarized data that does not show private information. The data is also safe, secure, and accountable since it comes from official government sources. They are also transparent with the data without giving out personal information. However, the dataset lacks when it comes to fairness and non-discrimination since not all worker groups are represented. The data does promote human values by showing wage and employment differences, but again, it lacks data on differences across more various groups.
+
+-   You should also include some additional "flair" on this landing page, such as an image.
+:::
+
+## Row 2 1.2: Providing Data Context {height="50%"}
+
+### Row 2 Column 1 {width="50%"}
+
+::: {.card title="Data Context: 2023 Full-Time, Year-Round Workers & Median Earnings by Sex & Occupation"}
+<https://www.census.gov/data/tables/time-series/demo/industry-occupation/median-earnings.html>
+
+This dataset is from the U.S. Census Bureau. The dataset represents a collection of records and other informational data from all sectors of industries in the U.S. in 2023, from management to farming. It also includes pay per gender (men vs. women) and the percentage of each gender in that occupation. Additionally, it has the median salary that each gender earns in that occupation. The information contained in this dataset is relevant to our project because our project dives deeper into the pay gap between men and women. This dataset contains very relevant information that we need to use to identify differences between men and women's pay.
+
+This dataset was made from surveying. It has 565 observable rows with 18 columns. The column names are related to gender and pay, estimated workers in that occupation per gender, median earnings per gender per occupation, and percentage of earnings that women get from the same job that a man works.
+
+From the analyzed data, we found no implausible or missing data. All the data is numerical and seems to be there in the dataset we found. There is also no visible data quality issue that we found for each variable, as each variable makes sense to use. The only slightly problematic variable is the MOE2 variable, as we don't quite know how to use it yet, but otherwise it being present in the dataset is not an issue. All of these variables being present does not impact the data quality or the reliability of the data from the dataset.
+:::
+
+### Row 2 Column 2 {width="50%"}
+
+::: {.card title="Data Context: Employed persons by detailed occupation, sex, race, and Hispanic or Latino ethnicity"}
+<https://www.bls.gov/cps/data/aa2023/cpsaat11.htm>
+
+This dataset is from the U.S. Bureau of Labor Statistics. The dataset represents a collection of records and informational data also from different working sectors in the U.S. in 2023. Since this is from a governmental organization like the first dataset, the exact names of the occupations exactly match, which is a very large benefit to using this dataset when joining it with our first dataset. However, this one differs in depth of detail as this one is more of a summary of data versus exact data like our first dataset. This dataset includes overviews of total employed people, how many of those are women, and the percentages of different races that are employed. This information is relevant to our project because we can use this dataset and compare it against our first one for analysis, to show that there are other factors that cause pay differences.
+
+This dataset was also made from surveying. It has 565 observable rows with 7 columns. The column names are related to the demographics of workers in each sector, such as gender composition and racial composition statistics. The most important data for us in this dataset are the second column 'Total employed' and the third column 'Women', as it will be useful to compare against the first dataset.
+:::
+
+## Row 3: Image
+
+![Image illustrating the concept of salary inequality and the gender pay gap, showing how different professions and genders receive varying levels of compensation.](pay_gap.png)
+
+## Row 4 1.3: Providing Group Information {height="20%"}
+
+::: {.card title="Group Information"}
+-   Srishti Bakshi (College of Arts & Sciences, University of Washington; sbakshi7\@uw.edu) is interested in exploring how data science methods can be used to analyze biological data. She is interested in the field of computational biology and specifically computational neuroscience.
+-   Emmalyn Nguyen (The Information School, University of Washington; emmalyn4\@uw.edu) is interested in exploring how technology design influences user behavior and decision-making, specifically in platforms that affect everyday communication and access to information. She is passionate about informatics and hopes to pursue a career that combines data analysis, product design, and technology to build tools that are both ethical and user-centered.
+-   Kesh Muthu (The Information School, University of Washington; keshm\@uw.edu) is interested in understanding user issues and security vulnerabilities in services and applications that run our world. He is currently studying Informatics to understand all aspects of the problem, human and technical, to cater to user needs and identify and fix security vulnerabilities, building applications that meet all user specifications and are invulnerable to attacks.
+:::
+
+# II.I: Visualization for Research Question 1
+
+## Row 1: Research Question 1 {height="5%"}
+
+**Research Question 1: Are occupations with a higher percentage of women associated with smaller or larger gender wage gaps?**
+
+## Row 2: Plot {height="50%"}
+
+### Row 2 Column 1: Plot {width="70%"}
+
+```{r}
+### Load Libraries and Dataset
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(plotly)
+
+joined_datasets <- read.csv("joined_datasets.csv")
+```
+
+```{r}
+### Pivot dataset longer and plot
+
+wage_long <- joined_datasets |>
+  select(Median.Earnings.Men.Estimate,
+         Median.Earnings.Women.Estimate) |>
+  pivot_longer(
+    cols = everything(),
+    names_to = "Gender",
+    values_to = "Median_Earnings"
+  ) |>
+  mutate(
+    Gender = recode(Gender,
+      "Median.Earnings.Men.Estimate" = "Men Wages",
+      "Median.Earnings.Women.Estimate" = "Women Wages"
+    )
+  )
+
+box_plot <-ggplot(wage_long, aes(x = Gender, y = Median_Earnings, fill = Gender)) +
+  geom_boxplot() +
+  labs(
+    title = "Distribution of Median Earnings by Gender",
+    x = "Gender",
+    y = "Median Earnings ($)"
+  ) +
+  theme_minimal()
+
+ggplotly(box_plot, tooltip = "text")
+```
+
+### Row 2 Column 2: Description {width="30%"}
+
+::: {.card title="Description of Visualization"}
+Hover over the boxplots to see specific statistics. From a cursory glance at the box plot to the left, it is clear that, on average, the wages for female workers are less than the wages for male workers. The median wage for males is \$60,444, while it is \$51,611 for women. Similarly, the quarter 1 and quarter 3 wages for men are \$46,491 and \$80,856, respectively, while they are \$39,858 and \$69,778 for women. Interestingly, the outliers are quite similar though (\$201,759 and \$250,000 for men and \$203,747 and \$250,000 for women).
+:::
+
+## Row 3: Coding Notes {height="10%"}
+
+::: {.card title="Coding Notes"}
+Most code used for this visualization (e.g. pivot_longer() and geom_boxplot()) was covered in class. The only new code is the recode() function from tidyverse, which we used to rename the columns "Median.Earnings.Men.Estimate" and "Median.Earnings.Women.Estimate" to "Men Wages" and "Women Wages", respectively, in the pivoted longer dataset. This makes the visualization labeling easier to read.
+:::
+
+# II.II: Visualization for Research Question 2
+
+## Row 1: Research Question 2 {height="5%"}
+
+**Research Question 2: How does the gender wage gap vary across occupations with different gender compositions (male-dominated, mixed-gender, female-dominated)?**
+
+```{r}
+### Load Libraries and Dataset
+
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(readr)
+library(scales)
+library(tidyr)
+library(plotly)
+
+joined_datasets <- read.csv("joined_datasets.csv")
+```
+
+```{r}
+### Conditional Transformation: Creating Gender Composition
+
+joined_datasets <- 
+  joined_datasets |>
+  mutate(
+    Gender.composition = case_when(
+      Percent.of.total.employed.Women < 40 ~ "Male-dominated",
+      Percent.of.total.employed.Women >= 40 & Percent.of.total.employed.Women <= 60 ~ "Mixed-gender",
+      Percent.of.total.employed.Women > 60 ~ "Female-dominated"
+    )
+  )
+```
+
+```{r}
+### Summarize Average Wage Gap by Composition
+
+summary_by_composition <- 
+  joined_datasets |>
+  group_by(Gender.composition) |>
+  summarize(
+    avg_wage_gap = mean(Wage.gap.percent, na.rm = TRUE),
+    avg_percent_women = mean(Percent.of.total.employed.Women),
+    count = n()
+  )
+```
+
+## Row 2: Male-Dominated Occupations Plot {height="25%"}
+
+### Row 2 Column 1: Plot {width="60%"}
+
+```{r}
+### Male-Dominated Occupations
+
+male_dom <- 
+  joined_datasets |>
+  filter(Gender.composition == "Male-dominated")
+
+male_dom_plot <- ggplot(male_dom, aes(
+  x = Percent.of.total.employed.Women,
+  y = Wage.gap.percent)) +
+  geom_point(color = "blue") +
+  labs(
+    title = "Gender Wage Gap in Male-Dominated Occupations",
+    x = "Percent of Women Workers",
+    y = "Wage Gap (%)")
+
+ggplotly(male_dom_plot)
+```
+
+### Row 2 Column 2: Description {width="40%"}
+
+::: {.card title="Description of Male-Dominated Occupations"}
+This scatter plot shows occupations where women make up less than 40% of the workforce, which are classified as male-dominated occupations. The x-axis shows the percentage of women workers, and the y-axis represents the gender wage gap. This plot shows many points at the higher wage gap percentages, which indicates that men tend to earn more than women in these specific occupations. As the percentage of women increases from around 10% to 35%, the wage gap still remains relatively high. This shows that increasing female representation in male-dominated occupations might not eliminate pay disparities, and wage inequalities may still be roughly the same.
+:::
+
+## Row 3: Mixed-Gender Occupations Plot {height="25%"}
+
+### Row 3 Column 1: Plot {width="60%"}
+
+```{r}
+### Mixed-Gender Occupations
+
+mixed_gender <- 
+  joined_datasets |>
+  filter(Gender.composition == "Mixed-gender")
+
+mixed_gender_plot <- ggplot(mixed_gender, aes(
+  x = Percent.of.total.employed.Women,
+  y = Wage.gap.percent)) +
+  geom_point(color = "orange") +
+  labs(
+    title = "Gender Wage Gap in Mixed-Gender Occupations",
+    x = "Percent of Women Workers",
+    y = "Wage Gap (%)")
+
+ggplotly(mixed_gender_plot)
+```
+
+### Row 3 Column 2: Description {width="40%"}
+
+::: {.card title="Description of Mixed-Gendered Occupations"}
+This plot shows occupations with women representing between 40% and 60% of the workforce, which are classified as mixed-gender occupations. This graph shows the wage gap to be between 5% and 25%, which indicates a slightly smaller difference between male and female earnings compared to in male-dominated fields. The points are also more tightly grouped, which is another indication of smaller wage gaps for these occupations. As the percentage of women approaches the 50% mark, the wage gap decreases slightly, with some occupations showing equal wages between men and women. This trend suggests that occupations with a more balanced gender representation tend to have less severe wage inequalities.
+:::
+
+## Row 4: Female-Dominated Occupations Plot {height="25%"}
+
+### Row 4 Column 1: Plot {width="60%"}
+
+```{r}
+### Female-Dominated Occupations
+
+female_dom <- 
+  joined_datasets |>
+  filter(Gender.composition == "Female-dominated")
+
+female_dom_plot <- ggplot(female_dom, aes(
+  x = Percent.of.total.employed.Women,
+  y = Wage.gap.percent)) +
+  geom_point(color = "pink") +
+  labs(
+    title = "Gender Wage Gap in Female-Dominated Occupations",
+    x = "Percent of Women Workers",
+    y = "Wage Gap (%)")
+
+ggplotly(female_dom_plot)
+```
+
+### Row 4 Column 2: Description {width="40%"}
+
+::: {.card title="Description of Female-Dominated Occupations"}
+This plot shows occupations where women make up over 60% of the workforce, classifying it as a female-dominated field. This visualization shows wage gaps across a wide range, with most occupations falling between 5% and 20%. This means that the difference between male and female wages tends to be smaller in female-dominated occupations, with some occupations reaching a 0% wage gap. We can also see that as the percentage of women increases towards 70% to 90%, the wage gap still varies across occupations. The trend in the plot shoes that wage disparities are still existing in female-dominated occupations.
+:::
+
+## Row 5: Coding Notes {height="20%"}
+
+::: {.card title="Coding Notes"}
+The novel tool used from outside of class was conditional transformation with case_when() to categorize occupations into male-dominated, mixed-gender, and female-dominated groups based on the percentage of women workers. Occupations with less than a 40% female workforce were considered "Male-Dominated", occupations with more than a 60% female workforce were considered "Female-Dominated", and any occupations in between were considered "Mixed-Gender". This transformation was needed because the original variable was continuous, making it harder to compare patterns across groups. Categorizing the occupations allowed for clearer comparisons of wage gap distributions across different gender compositions.
+:::
+
+# II.III: Visualization for Research Question 3
+
+## Row 1: Research Question 3 {height="5%"}
+
+**Research Question 3: Does the size of an occupation’s workforce relate to the magnitude of its gender wage gap?**
+
+## Row 2: Description of Visualization {height="20%"}
+
+::: {.card title="Description of Visualization"}
+The goal of this question is to understand if a bigger workforce means more of a gender pay gap between men and women, leaning towards men earning higher. On this page, there are two things, a scatter plot visualizing the workforce size vs. the pay gap as a ratio, along with colored dots indicating if that workforce is male or female dominated. The scatter plot helps provide insights into this question because it visualizes the pay gap for each workforce, identifying any outliers and letting us see the differences in pay visually. The second item is a correlation coefficient identifying if there is truly a relationship between workforce size and the pay gap. Positive numbers mean a strong positive relationship and negative numbers mean a strong negative relationship. Numbers near 0 mean that there is no relationship identified.
+:::
+
+## Row 3: Plot and Correlation Coefficient
+
+### Row 3 Column 1: Plot {width="70%"}
+
+```{r}
+### Load Libraries and Dataset
+
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(readr)
+library(scales)
+library(tidyr)
+
+joined_datasets <- read.csv("joined_datasets.csv")
+```
+
+```{r}
+### Data Creation for Analysis
+
+ratio_df <- joined_datasets |>
+  filter(!is.na(Median.Earnings.Men.Estimate),
+         !is.na(Median.Earnings.Women.Estimate),
+         Median.Earnings.Men.Estimate > 0,
+         Median.Earnings.Women.Estimate > 0,
+         !is.na(Number.of.Workers.Total.Estimate),
+         Number.of.Workers.Total.Estimate > 0) |>
+  mutate(
+    pay_ratio_men_women = Median.Earnings.Men.Estimate / Median.Earnings.Women.Estimate, 
+    Number.of.Workers.Total.Estimate_num =
+      as.numeric(gsub(",", "", `Number.of.Workers.Total.Estimate`))
+  ) |>
+  filter(!is.na(Number.of.Workers.Total.Estimate_num))
+
+correlation_df <- ratio_df |>
+  mutate(
+    total_workers = as.numeric(gsub(",", "", Number.of.Workers.Total.Estimate))
+  ) |>
+  filter(!is.na(total_workers), !is.na(pay_ratio_men_women))
+```
+
+```{r}
+### Visualization of Workforce vs. Gender Pay Gap Ratio
+
+p_scatter <- ggplot(ratio_df, aes(x = Number.of.Workers.Total.Estimate_num, y = pay_ratio_men_women)) +
+  geom_point(aes(color = Gender.composition), alpha = 0.65) +
+  scale_x_continuous(
+    labels = label_number(scale = 1e-6, suffix = "M"),
+    breaks = breaks_extended(n = 6)
+  ) +
+  scale_y_continuous(labels = number_format(accuracy = 0.01)) +
+  labs(
+    title = "Magnitude of Pay Gap vs. Workforce Size",
+    x = "Total Workforce (millions)",
+    y = "Pay Ratio (Men's/Women's median pay)",
+    color = "Workforce Majority Composition"
+  ) +
+  theme_minimal()
+
+ggplotly(p_scatter)
+```
+
+### Row 3 Column 2: Correlation Coefficient {width="30%"}
+
+```{r}
+correlation <- correlation_df |>
+  summarize(
+    correlation = cor(total_workers, pay_ratio_men_women, use = "complete.obs")
+  ) |>
+  pull(correlation)
+```
+
+We find the correlation coefficient as using the `correlation_df` as it contains the fields we need. The correlation coefficient will tell us a definite answer to our question. Values near 0 have no linear relationship with each other, while values toward -1 have strong negative relationship, and values toward 1 have strong positive relationship. Without this coefficient, it would be hard to summarize just by the scatter plot if there is a relationship or not between workforce size and gender pay gap. We found the correlation of workforce size vs. magnitude of pay gap to be `r correlation`.
+
+## Row 4: Coding Notes {height="15%"}
+
+::: {.card title="Coding Notes"}
+The novel tool used from outside of class is the correlation coefficient. The creation of the `correlation_df` was specifically for the `correlation` variable. Using this variable solves our problem of trying to find different graphs or plots to figure out if there is a correlation between workforce size and gender pay gap. While it is okay to just look at the scatter plot, this gives us a more definite answer than the plot would have. This question could not have been solved accurately without this coefficient. I learned to use this correlation tool by studying R documentation and searching example code using it.
+:::
+
+# III: A conclusion section of summary takeaways.
+
+From this project, we learned that gender pay gaps prominently exist, and women on average earn around 95% of men's salaries from the dataset. While this is more than what it was 20 years ago (around 76% according to Google), this is still not equal to what men earn, which raises a new question: What is keeping the pay gap from being closed?
+
+From our first research question, we found that the wage distribution for men is higher than it is for women. The median, quartile 1, and quartile 3 wages for men are all higher than they are for women. There was a \$8,833 difference between the medians, a \$6,633 difference between the quartile 1 metrics, and a \$11,078 difference between the quartile 3 metrics.
+
+From our second research question, we looked at how the gender wage gap changes across male-dominated, mixed-gender, and female-dominated occupations. The graphs show that the wage gap exists in all three groups. In male-dominated occupations, the gap hovers around 10% to 25%, with some occupations having over 50%. In mixed-gender occupations, the majority of the wage gaps are between 5% to 25%, with some occupations reaching around 40%. In female-dominated occupations, many jobs show a wage gap of around 5% to 20%, with some reaching up to 40%. Overall, there is an average wage gap of 10% to 20% across all groups, suggesting that having more representation of women in occupations may not completely eliminate pay disparities
+
+From our third research question, we also found out that workforce size of a company has nothing to do with the gender pay gap. This was seen through the correlation coefficient, where the end result was around `r correlation`. Since this is near 0, this suggests that there is nearly 0 correlation between what the size of a workforce is and if that affects a woman earning less than a man. This can also be seen in the scatter plot, where there are only a few outliers of data. Most of the plot points stay near or move toward a ratio of 1, suggesting that most women do nearly make as much as men do, regardless of workforce size.
+
+We believe that our data exploration is underestimating as many factors that could certainly have an impact on salary asides from gender are not accounted for nor controlled for. Such factors are seniority, hours worked, location, education level. These are all valid reasons that could affect someone's salary, so not controlling for them could mean we are comparing wages that are not truly comparable.
+
+Some future directions we could take for our research would be to incorporate racial demographic data alongside gender demographic data. Oftentimes, intersectionality between gender and race can shape workers’ experiences and outcomes in the labor market, leading to different wage patterns across demographic groups. Examining how gender wage gaps vary within different racial or ethnic groups could provide a more complete understanding of inequality across occupations. Additionally, incorporating more detailed demographic data could help identify whether certain groups face larger disparities in particular fields and allow researchers to explore how structural factors contribute to these differences.
