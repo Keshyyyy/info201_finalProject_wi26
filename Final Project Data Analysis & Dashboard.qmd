@@ -1,4 +1,4 @@
----
+--- 
 title: "Final Project -- Data Analysis & Dashboard"
 author: "Emmalyn Nguyen, Srishti Bakshi, Kesh Muthu"
 date: today
